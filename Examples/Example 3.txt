@@ -1,0 +1,14 @@
+#define MinDepth 2
+#define MaxDepth 8
+
+double MeshSize(double x, double y)
+{
+    double E = 0.0625;
+    if (x == 0 || x == 1 || y == 0 || y == 1)
+        E = 0;
+    double I = 0.0625;
+    if (0.5 < x && x < 0.75)
+        if (0.5 < y && y < 0.75)
+            I = 1.0/64;
+    return MIN(I, E);
+}

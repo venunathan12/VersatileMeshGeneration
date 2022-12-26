@@ -1,0 +1,8 @@
+#define MinDepth 2
+#define MaxDepth 8
+
+double MeshSize(double x, double y)
+{
+    double Min = 0, D = sqrt(x*x + y*y) - 0.5;
+    return Min + MAX(D, -D) * 0.25;
+}
